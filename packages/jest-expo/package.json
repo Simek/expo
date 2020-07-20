@@ -1,6 +1,7 @@
 {
   "name": "jest-expo",
   "version": "38.0.0",
+  "ddescription": "A Jest preset to painlessly test your Expo apps.",
   "license": "MIT",
   "main": "src",
   "repository": {
