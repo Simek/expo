@@ -113,12 +113,7 @@ export async function resume() {
     return ExponentSpeech.resume();
 }
 function setSpeakingListener(eventName, callback) {
-    // @ts-ignore: the EventEmitter interface has been changed in react-native@0.64.0
-    const listenerCount = SpeechEventEmitter.listenerCount
-        ? // @ts-ignore: this is available since 0.64
-            SpeechEventEmitter.listenerCount(eventName)
-        : // @ts-ignore: this is available in older versions
-            SpeechEventEmitter.listeners(eventName).length;
+    const listenerCount = SpeechEventEmitter.listenerCount(eventName);
     if (listenerCount > 0) {
         SpeechEventEmitter.removeAllListeners(eventName);
     }

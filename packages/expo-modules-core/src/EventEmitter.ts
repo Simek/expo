@@ -45,12 +45,7 @@ export class EventEmitter {
   }
 
   removeAllListeners(eventName: string): void {
-    // @ts-ignore: the EventEmitter interface has been changed in react-native@0.64.0
-    const removedListenerCount = this._eventEmitter.listenerCount
-      ? // @ts-ignore: this is available since 0.64
-        this._eventEmitter.listenerCount(eventName)
-      : // @ts-ignore: this is available in older versions
-        this._eventEmitter.listeners(eventName).length;
+    const removedListenerCount = this._eventEmitter.listenerCount(eventName);
     this._eventEmitter.removeAllListeners(eventName);
     this._listenerCount -= removedListenerCount;
     invariant(
