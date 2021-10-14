@@ -10,6 +10,8 @@
 
 ### 💡 Others
 
+- Update `compare-urls` dependency to version `3.0.0`.
+
 ## 10.0.1 — 2021-10-01
 
 _This version does not introduce any user-facing changes._
@@ -73,7 +75,7 @@ _This version does not introduce any user-facing changes._
 
 ### 🐛 Bug fixes
 
-- Removed unncecessary Android dependencies. ([#9538](https://github.com/expo/expo/pull/9538) by [@barthap](https://github.com/barthap))
+- Removed unnecessary Android dependencies. ([#9538](https://github.com/expo/expo/pull/9538) by [@barthap](https://github.com/barthap))
 - Fixed `openAuthSessionAsync` crashing when cancelled on iOS. ([#9722](https://github.com/expo/expo/pull/9722) by [@barthap](https://github.com/barthap))
 
 ## 8.4.0 — 2020-07-29
