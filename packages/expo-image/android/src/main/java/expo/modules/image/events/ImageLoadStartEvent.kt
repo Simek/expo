@@ -2,12 +2,12 @@ package expo.modules.image.events
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.uimanager.events.Event
-import com.facebook.react.uimanager.events.RCTEventEmitter
+import com.facebook.react.uimanager.events.RCTModernEventEmitter
 
 class ImageLoadStartEvent(viewId: Int) : Event<ImageLoadStartEvent>(viewId) {
   override fun getEventName() = EVENT_NAME
 
-  override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+  override fun dispatch(rctEventEmitter: RCTModernEventEmitter) {
     rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
   }
 

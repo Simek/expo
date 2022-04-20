@@ -18,7 +18,7 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.modules.i18nmanager.I18nUtil
 import com.facebook.react.uimanager.PixelUtil
-import com.facebook.react.uimanager.events.RCTEventEmitter
+import com.facebook.react.uimanager.events.RCTModernEventEmitter
 import expo.modules.image.drawing.BorderDrawable
 import expo.modules.image.drawing.OutlineProvider
 import expo.modules.image.enums.ImageResizeMode
@@ -37,7 +37,7 @@ class ExpoImageView(
   private val requestManager: RequestManager,
   private val progressInterceptor: OkHttpClientProgressInterceptor
 ) : AppCompatImageView(context) {
-  private val eventEmitter = context.getJSModule(RCTEventEmitter::class.java)
+  private val eventEmitter = context.getJSModule(RCTModernEventEmitter::class.java)
   private val outlineProvider = OutlineProvider(context)
 
   private var propsChanged = false

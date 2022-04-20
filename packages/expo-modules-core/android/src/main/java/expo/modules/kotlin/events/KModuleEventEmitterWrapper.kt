@@ -6,7 +6,7 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.events.EventDispatcher
-import com.facebook.react.uimanager.events.RCTEventEmitter
+import com.facebook.react.uimanager.events.RCTModernEventEmitter
 import expo.modules.kotlin.ModuleHolder
 import expo.modules.kotlin.records.Record
 import expo.modules.kotlin.types.JSTypeConverter
@@ -95,7 +95,7 @@ open class KEventEmitterWrapper(
     override fun getEventName(): String = eventName
     override fun canCoalesce(): Boolean = false
     override fun getCoalescingKey(): Short = 0
-    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+    override fun dispatch(rctEventEmitter: RCTModernEventEmitter) {
       rctEventEmitter.receiveEvent(viewId, eventName, eventBody)
     }
   }

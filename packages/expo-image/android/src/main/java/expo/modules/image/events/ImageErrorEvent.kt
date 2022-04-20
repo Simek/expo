@@ -5,12 +5,12 @@ import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.events.Event
-import com.facebook.react.uimanager.events.RCTEventEmitter
+import com.facebook.react.uimanager.events.RCTModernEventEmitter
 
 class ImageErrorEvent(viewId: Int, private val mException: GlideException?) : Event<ImageErrorEvent>(viewId) {
   override fun getEventName() = EVENT_NAME
 
-  override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+  override fun dispatch(rctEventEmitter: RCTModernEventEmitter) {
     val eventData = Arguments.createMap().apply {
       putString("error", mException.toString())
       putMap("android", serializeGlideException(mException))

@@ -10,9 +10,9 @@ import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.transition.Transition
 import com.facebook.react.modules.network.ProgressListener
 import com.facebook.react.uimanager.events.Event
-import com.facebook.react.uimanager.events.RCTEventEmitter
+import com.facebook.react.uimanager.events.RCTModernEventEmitter
 
-class ImageLoadEventsManager(private val mViewId: Int, private val mEventEmitter: RCTEventEmitter?) : CustomTarget<BitmapFactory.Options?>(), RequestListener<Drawable?>, ProgressListener {
+class ImageLoadEventsManager(private val mViewId: Int, private val mEventEmitter: RCTModernEventEmitter?) : CustomTarget<BitmapFactory.Options?>(), RequestListener<Drawable?>, ProgressListener {
   private var mBitmapFactoryOptions: BitmapFactory.Options? = null
   private var mDataSource: DataSource? = null
   private var mModel: Any? = null

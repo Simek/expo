@@ -12,6 +12,8 @@
 
 ### 💡 Others
 
+- Use recommended `RCTModernEventEmitter` instead of `RCTEventEmitter`.
+
 ## 0.8.0 — 2022-04-18
 
 ### 🛠 Breaking changes

@@ -6,7 +6,7 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.uimanager.UIManagerModule;
-import com.facebook.react.uimanager.events.RCTEventEmitter;
+import com.facebook.react.uimanager.events.RCTModernEventEmitter;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,7 +40,7 @@ public class EventEmitterModule implements EventEmitter, InternalModule {
       }
 
       @Override
-      public void dispatch(RCTEventEmitter rctEventEmitter) {
+      public void dispatch(RCTModernEventEmitter rctEventEmitter) {
         rctEventEmitter.receiveEvent(viewId, eventName, eventBody != null ? Arguments.fromBundle(eventBody) : null);
       }
 
@@ -69,7 +69,7 @@ public class EventEmitterModule implements EventEmitter, InternalModule {
       }
 
       @Override
-      public void dispatch(RCTEventEmitter rctEventEmitter) {
+      public void dispatch(RCTModernEventEmitter rctEventEmitter) {
         rctEventEmitter.receiveEvent(viewId, event.getEventName(), Arguments.fromBundle(event.getEventBody()));
       }
 
