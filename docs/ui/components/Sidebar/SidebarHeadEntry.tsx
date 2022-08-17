@@ -51,7 +51,7 @@ const entryContainerStyle = css({
 const activeEntryContainerStyle = css({
   color: theme.text.default,
   fontFamily: typography.fontFaces.medium,
-  background: theme.background.quaternary,
+  background: theme.background.tertiary,
   borderRadius: borderRadius.medium,
 
   '[data-expo-theme="dark"] &': {

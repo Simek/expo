@@ -47,7 +47,7 @@ const logoStyle = css`
 `;
 
 const hideOnMobile = css`
-  @media screen and (max-width: ${breakpoints.medium}px) {
+  @media screen and (max-width: ${(breakpoints.medium + breakpoints.large) / 2}px) {
     display: none;
   }
 `;
@@ -55,7 +55,7 @@ const hideOnMobile = css`
 const showOnMobile = css`
   display: none;
 
-  @media screen and (max-width: ${breakpoints.medium}px) {
+  @media screen and (max-width: ${(breakpoints.medium + breakpoints.large) / 2}px) {
     display: block;
     margin-top: 0;
   }

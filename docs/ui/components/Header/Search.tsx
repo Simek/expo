@@ -132,7 +132,7 @@ const searchContainerStyle = css`
   flex-grow: 1;
   ${typography.fontSizes[14]};
 
-  @media screen and (max-width: ${breakpoints.medium}px) {
+  @media screen and (max-width: ${(breakpoints.medium + breakpoints.large) / 2}px) {
     display: none;
     margin-left: 0;
   }
@@ -190,7 +190,7 @@ const searchContainerStyle = css`
 const mobileSearchContainerStyle = css`
   display: none;
 
-  @media screen and (max-width: ${breakpoints.medium}px) {
+  @media screen and (max-width: ${(breakpoints.medium + breakpoints.large) / 2}px) {
     display: flex;
     max-width: 100%;
   }
